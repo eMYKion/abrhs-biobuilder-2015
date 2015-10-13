@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ABRHS BioBuilder 2015-16</title>
+    <script type="text/javascript"></script>
+    <style>
+      body{
+        font-family: "Arial";
+        
+      
+      }
+      
+      body a{
+        text-decoration: none;
+        color: #000;
+      }
+      
+      .flexdiv{
+        display: flex;
+        justify-content: space-around;
+      }
+      
+      .hide{
+        display: none;
+      }
+      
+      .show{
+        display: block;
+      }
+      
+      
+      
+      #header ul{
+        list-style-type: none;
+        
+        
+      }
+      #header ul li{
+        
+        background-color:  rgba(0, 153, 51, 0.5);
+        padding:10px;
+      }
+      
+      
+      
+      #content{
+        padding:100px;
+        background-color:  rgba(0, 153, 51, 0.5);
+      }
+      
+      
+      
+      #footer ul{
+        list-style-type: none;
+      }
+      
+      #footer ul li{
+        
+        background-color:  rgba(0, 153, 51, 0.5);
+        padding:10px;
+      }
+      
+      
+      
+      
+    </style>
+  </head>
+  <body >
+    <div id="banner" class="flexdiv">
+      <img src="http://emykion.github.io/abrhs-biobuilder/images/Banner.png">
+    </div>
+    <div id="header" >
+      
+      <ul class="flexdiv">
+        <li onclick="show('home')"><a href="#">Home</a></li>
+        <li onclick="show('project')"><a href="#">Project</a></li>
+        <li onclick="show('team')"><a href="#">Team</a></li>
+        <li onclick="show('outreach')"><a href="#">OutReach</a></li>
+      </ul>
+      
+    </div>
+    
+    
+    <div id="content" class="flexdiv">
+    
+      <section id="home">
+        <p>
+          Welcome to the ABRHS 2015-2016 BioBuilder Team. Below, you can find links to our school, the BioBuilder organization, and our previous projects about synthetic biology.
+        </p>
+      </section>
+      
+      <section id="project">
+        <p>
+          This is our project page. Currently, we are brainstorming project ideas.
+        </p>
+      </section>
+      
+      <section id="team">
+        <p>
+          This is the team page. We have 10 members.
+        </p>
+      </section>
+      
+      <section id="outreach">
+        <p>
+          This is the outreach page. 
+        </p>
+      </section>
+    
+    </div>
+    
+    <div id="footer">
+      <ul class="flexdiv">
+        <li><a href="http://abrhs.abschools.org/">ABRHS</a></li>
+        <li><a href="http://biobuilder.org/">BioBuilder</a></li>
+        <li><a href="http://emykion.github.io/abrhs-biobuilder/">2014-15 BioBuilder Project</a></li>
+        <li><a href="http://2014hs.igem.org/Team:Acton-BoxboroughRHS">2013-14 iGEM Project</a></li>
+      </ul>
+    </div>
+  
+    <script>
+      
+      function clear(){
+        cnt = document.getElementById("content");
+        for(var i=0,n=cnt.childNodes.length;i<n;i+=1){
+          cnt.childNodes[i].className="hide";
+        }
+      }  
+      
+      function show(id){
+        clear();
+        document.getElementById(id).className = "show";
+      }
+      
+      clear();
+      show("home")
+      
+      
+    </script>
+  </body>
+</html>
