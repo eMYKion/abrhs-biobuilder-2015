@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <!--Mayank Mali 2015-2016-->
   <head>
     <title>ABRHS BioBuilder 2015-16</title>
     <script type="text/javascript"></script>
@@ -10,10 +11,28 @@
       
       }
       
+      body h1{
+        color: rgba(0, 153, 51, 0.5);
+      }
+      
+      body section{
+        text-align: center;
+      }
+      
       body a{
         text-decoration: none;
-        color: #000;
+        color: #002bb8;
       }
+      
+      body a:hover{
+        text-decoration: underline;
+      }
+      
+      #banner{
+        text-align: center;
+      }
+      
+      
       
       .flexdiv{
         display: flex;
@@ -28,35 +47,53 @@
         display: block;
       }
       
+      .persona {
+        width: 300px;
+        height: auto;
+        
+        text-align: center;
+        float: left;
+        margin: 20px;
+      } 
       
+      .persona div img{
+        max-width:100%;
+        height:auto;
+        
+      }
+      
+      #header{
+        font-size: 25px;
+      }
       
       #header ul{
         list-style-type: none;
+        background-color:  rgba(0, 153, 51, 0.5);
         
         
       }
       #header ul li{
-        
-        background-color:  rgba(0, 153, 51, 0.5);
         padding:10px;
+      }
+      
+      #header ul li a{
+        text-decoration: none;
+        color: #000;
       }
       
       
       
       #content{
         padding:100px;
-        background-color:  rgba(0, 153, 51, 0.5);
+        
       }
-      
-      
-      
+
       #footer ul{
         list-style-type: none;
+        
       }
       
       #footer ul li{
-        
-        background-color:  rgba(0, 153, 51, 0.5);
         padding:10px;
       }
       
@@ -66,52 +103,190 @@
     </style>
   </head>
   <body >
-    <div id="banner" class="flexdiv">
-      <img src="http://emykion.github.io/abrhs-biobuilder/images/Banner.png">
+    <div id="banner" class="flexdiv" >
+      <img src="images/banner.png">
     </div>
-    <div id="header" >
+    
+    <div id="header">
       
       <ul class="flexdiv">
-        <li onclick="show('home')"><a href="#">Home</a></li>
-        <li onclick="show('project')"><a href="#">Project</a></li>
-        <li onclick="show('team')"><a href="#">Team</a></li>
-        <li onclick="show('outreach')"><a href="#">OutReach</a></li>
+        <li onclick="show('home')"><a href="#Home">Home</a></li>
+        <li onclick="show('project')"><a href="#Project">Project</a></li>
+        <li onclick="show('team')"><a href="#Team">Team</a></li>
+        <li onclick="show('outreach')"><a href="#Outreach">Outreach</a></li>
+        <li onclick="show('labs')"><a href="#Labs">Labs</a></li>
+        
       </ul>
       
     </div>
+    <hr>
     
     
     <div id="content" class="flexdiv">
     
       <section id="home">
-        <p>
-          Welcome to the ABRHS 2015-2016 BioBuilder Team. Below, you can find links to our school, the BioBuilder organization, and our previous projects about synthetic biology.
-        </p>
+        <img src="images/abrhs_logo.jpg">
+        <h1>Home</h1>
+        <p>Welcome to the ABRHS 2015-2016 BioBuilder Team.</p>
+        <br>
+        <h1>Abstract</h1>
+        <p>Skin infection can easily be caused by the intrusion of large forien objects, particularily wood splinters, into the skin. In rural areas where there is little medical attention, contamination of dirt and malignant bacteria can make wounds by foreign objects dangerous. A solution  biomaterial that could dissolve fragmented material inside human skin could be grown and stored accessibly in such regions. Such a biomaterial could be injected into a wound site, where enzymes can hydrolyze tough carbohydrates rendering a splinter easily removable by medical tools or by the body's own immune system. By loading a chassis E. Coli with enzymes for the breakdown or wood or other plant material, we can develop a strain of splinter removing bacteria that self-terminates after its job is done.</p>
+        
       </section>
       
       <section id="project">
-        <p>
-          This is our project page. Currently, we are brainstorming project ideas.
+        <h1>Project</h1>
+        <p> Our project this year is to make a biomaterial that can dissolve fragmented material inside human skin, particularily wood splinters. Our E. Coli chassis must be able to dissolve this hard plant material in a reasonable time frame, and must render the splinter removable physically or immunologically.
         </p>
+        
+        <h1>Initial Project Ideas</h1>
+        <p>
+          During our brainstorming sessions, our team members would pool together project ideas or even phrases pertaining to various biological phenomena. Next, we narrowed that list down by having members choose and research any ideas from the list we had made. Members researched problems that their concept could solve, previous iGEM and BioBuilder projects, and parts from <a href="http://parts.igem.org/Main_Page">iGEM's Registry of Standard Biological Parts</a>. After presenting research, we came together and voted on the project ideas. The foreign material remover was our majority vote.
+        </p>
+        
       </section>
       
       <section id="team">
+        <h1>Team</h1>
         <p>
-          This is the team page. We have 10 members.
+          Our team consists of students from grades 9-12 of the Acton-Boxborough Regional High School. This has been our synthetic biology club's second year participating in BioBuilder and third year in activity, as we competed in the iGEM competition our first year. Our group is diverse and promotes a wide variety of paradigms in our weekly meetings:
         </p>
+        
+        <div>
+          
+          <div class="persona" >
+            <div>
+              <img src="images/Mayank.png">
+            </div>
+            <h3>Mayank Mali</h3>
+            <p>The 11th grade website designer.</p>
+            <p>"I love all things STEM, but working on a genetic engineering project is especially fun. It always helps the learning process to see a newly learned concept turn into an end-product so tangible."</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Madhuri Jois</h3>
+            <p>The Cool Student</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Caleb Trotz</h3>
+            <p>The Cool Student</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Aaron Chen</h3>
+            <p>The Cool Student</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Roy Yoon</h3>
+            <p>The Cool Student</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Ashna Raiker</h3>
+            <p>The Cool Student</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Jana Latayan</h3>
+            <p>The Cool Student</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Peter Wilson</h3>
+            <p>The Cool Student</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Sarah Bluhm</h3>
+            <p>The Cool Student</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Katherine Liu</h3>
+            <p>The Cool Student</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+          <div class="persona" >
+            <div>
+              <img>
+            </div>
+            <h3>Aaron Mathieu</h3>
+            <p>The Cool Teacher</p>
+            <p>"I love genetic engineering!"</p>
+          </div>
+          
+        </div>
+        
       </section>
       
       <section id="outreach">
-        <p>
-          This is the outreach page. 
-        </p>
+        <h1>Outreach</h1>
+        <p>In order to educate our local community about the field of genetic engineering as well as our own personal endeavors, our BioBuilder team hosted an exhibit at Acton-Boxborough's Science Family Night, where families could come and learn about local STEM projects in our community. During the exhibition, we also conducted a survey with our very own vitamin-A enriched genetically modified yeast-bread. We asked participants whether they would be willing to eat a genetically modified food product. Although we conducted this same survey last year at the same event, we found a larger percentage of people willing to eat genetically modified yeast bread in this year's responses.</p>
+        <br>
+        <div style="height:600px;">
+          <img style="max-height:50%;width:auto;" src="images/outreach-1.JPG">
+          <img style="max-height:50%;width:auto;" src="images/outreach-2.JPG">
+        </div>
+      </section>
+      
+      <section id="labs">
+        <h1>Labs</h1>
+        <p>We conducted many labs, from our own transformation labs to complete our project, or introductory labs to familiarize our members with the tools and methods required for general sythnetic biology knowledge.</p>
+        <h1>What a Colorful World</h1>
+        <p>Our first lab came with the BioBuilder standard kit and was used to introduce our members to the processes and tools of transformation. Four treatments of E. coli would be produced, one with E. Coli strain 4-1 and the pPRL plasmid, strain 4-2 and pRPL plasmid, strain 4-1 and pGRN plasmid, and strain 4-2 and pPRL plasmid. The pPRL, and pGRN sequences produce purple and green pigment respectively.</p>
+        <br>
+        <div style="height:400px;">
+          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-1.JPG">
+          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-2.JPG">
+          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-3.JPG">
+          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-4.JPG">
+          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-5.JPG">
+        </div>
       </section>
     
     </div>
-    
+    <hr>
     <div id="footer">
       <ul class="flexdiv">
-        <li><a href="http://abrhs.abschools.org/">ABRHS</a></li>
+        <li><a href="http://www.abschools.org/home">ABRHS</a></li>
         <li><a href="http://biobuilder.org/">BioBuilder</a></li>
         <li><a href="http://emykion.github.io/abrhs-biobuilder/">2014-15 BioBuilder Project</a></li>
         <li><a href="http://2014hs.igem.org/Team:Acton-BoxboroughRHS">2013-14 iGEM Project</a></li>
