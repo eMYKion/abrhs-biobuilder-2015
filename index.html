@@ -3,6 +3,7 @@
   <!--Mayank Mali 2015-2016-->
   <head>
     <title>ABRHS BioBuilder 2015-16</title>
+    <meta charset="UTF-8">
     <script type="text/javascript"></script>
     <style>
       @font-face {
@@ -135,7 +136,9 @@
         <p>Welcome to the ABRHS 2015-2016 BioBuilder Team.</p>
         <br>
         <h1>Abstract</h1>
-        <p>Imagine dissolving a large splinter embedded in the skin instead of painfully plucking it out. A mechanism that could dissolve fragmented wood material inside human skin could be grown and stored so that painfull splinters could be removed without hassle. A hypothetical bio-mechanism could be injected into a wound site, where expressed enzymes can hydrolyze tough carbohydrates such as lignin and cellulose in the splinter, rendering a splinter easily removable by flushing the wound. By loading a chassis E. Coli with enzymes for the breakdown of tough carbohydrates, our team can develop a strain of splinter removing bacteria that self-terminates after its job is done.</p>
+        <p>Wood splinters are a common everyday injury; however, as bothersome as it is to get the splinter itself, it can prove even more cumbersome to remove it. Along with the stinging that is normally produced when one attempts to simply pull the wood splinter out, there is always the risk that small fragments of wood may be left behind. With improper removal comes the risk of infection, and if the wood splinter itself is already contaminated with bacteria or fungi, one can fall prey to a more severe illness. Even without contaminated wood, the body responds in a detrimental manner, sparking inflammatory reactions to the oils and resins of the wood. Infection is likely to occur if one removes the wooden splinter improperly, let alone if the wooden splinter is completely ignored (<a href="http://www.aafp.org/afp/2003/0615/p2557.html">Chan and Salam, 2003</a>). In this case, if the splinter is not treated, an inflammatory reaction is almost inevitable.
+	<br><br>The breakdown of cellulose from plant materials poses three major problems: first, we must isolate individual cellulose strains, then cut the long cellulose strands into smaller fragments, and finally cut those fragments down to glucose, which will be metabolized by the E. coli. For the first stage, we will use a ligninase to cut the lignin which holds the cellulose in the crystalline wood structure. This will release single strands of cellulose for attack by our endoglucanase, which will cut the long strands randomly in the middle to produce shorter and shorter strands, whose ends will come under attack by beta-glucosidase, an enzyme that will cut off individual glucose molecules and ultimately fully destroy the glucose polymers, disposing of the cellulose. 
+ </p>
         
       </section>
       
@@ -143,6 +146,32 @@
         <h1>Project</h1>
         <p> Our project this year is to make a biomaterial that can dissolve fragmented material inside human skin, particularily wood splinters. Our E. Coli chassis must be able to dissolve this hard plant material in a reasonable time frame, and must render the splinter removable physically or immunologically.
         </p>
+        
+        <h1>Plant Material Digestion Part Design</h1>
+        <p>
+          We are going to use three proteins to aid in the breakdown of rough plant material. 
+          Our chassis, E. Coli, will be transformed with one plasmid with all our recombinant DNA on it. 
+          Along with ampicillin resistance, the <a href="http://parts.igem.org/Part:pSB1A2">pSB1A2</a> plasmid would consist of three enzymes in series, 
+          endoglucanase (<a href="http://parts.igem.org/Part:BBa_K805011">BBa_K805011</a>), &beta;-glucosidase (<a href="http://parts.igem.org/Part:BBa_K118028">BBa_K118028</a>), and finally a ligninase (<a href="http://parts.igem.org/Part:BBa_M36188">BBa_M36188</a>), 
+          in that order. Because the endoglucanase part is activated by the presence of cellulose (and even long cellulose strands) 
+          and the three enzymes are placed in direct order, cellulose entering our chassis will ultimately cause the expression of all three enzymes. 
+          The endoglucanase part is also glucose-repressible, meaning when glucose is present as a monosaccharide in the cytoplasm, 
+          all three parts cease to be transcribed. In order to put all three enzymes onto the same plasmid
+          that the endoglucanase is located, we will utilize the built-in restriction enzymes and follow similar
+          laboratory instructions as <a href = "http://openwetware.org/wiki/Synthetic_Biology:BioBricks/3A_assembly">3A Assembly</a>. Restriction enzymes that we can use include <a href="https://www.neb.com/products/R0133-spei">SpeI</a>, <a href="https://www.neb.com/products/R0189-noti">NotI</a>, <a href="https://www.neb.com/products/R0140-psti">PstI</a>,
+          all of which act on restriction sites built in our plasmid after the main ORF sequence.
+        </p>
+        <ul style="text-align:left">
+          <li>Plasmid with Endoglucanase: <a href="http://beta.labgeni.us/registries/parts_registry/?part=BBa_K805011">http://beta.labgeni.us/registries/parts_registry/?part=BBa_K805011</a></li>
+
+          <li>Lone pSB1A2 plasmid: <a href="http://parts.igem.org/Part:pSB1A2">http://parts.igem.org/Part:pSB1A2</a></li>
+
+          <li>Cel5A, endoglucanase: <a href="http://parts.igem.org/Part:BBa_K805011">http://parts.igem.org/Part:BBa_K805011</a></li>
+
+          <li>Beta-Glucosidase: <a href="http://parts.igem.org/Part:BBa_K118028">http://parts.igem.org/Part:BBa_K118028</a></li>
+
+          <li>Ligninase: <a href="http://parts.igem.org/Part:BBa_M36188">http://parts.igem.org/Part:BBa_M36188</a></li>
+        </ul>
         
         <h1>Initial Project Ideas</h1>
         <p>
@@ -160,6 +189,8 @@
           
           The foreign material remover was our majority vote.
         </p>
+        
+        
         
       </section>
       
@@ -208,7 +239,7 @@ that further develop the way I think and solve problems.</p>
             </div>
             <h3>Madhuri Jois</h3>
             <p>The Cool Student</p>
-            <p>"I love genetic engineering!"</p>
+            <p>Madhuri Jois, Supreme Dictator, enjoys spending her time reflecting on amazing literature and TV shows. As a senior exposed to horrible SAT vocab lists, she has finally discovered that she is a self-proclaimed misanthrope. She has been in BioBuilder for three years, but joining the BioBuilder Team was merely a way for her to design a super organism that will wipe out the human race, a species that she particularly despises. One rather fascinating aspect of Madhuri is she greatly enjoys eating Dove chocolates and reading the profound statements on the wrappers. Madhuri currently uses the TV show Avatar: the Last Airbender as a reference to appropriate human etiquette. In fear of someday becoming a terrifying crotchety cat lady, she would like to make the distinction that she would prefer a flying bison as a pet. She hopes to go to medical school in her future, which, in this author’s opinion, is to gain a better understanding of the human body in order to properly eviscerate those who annoy her.</p>
           </div>
           
           <div class="persona" >
@@ -230,7 +261,7 @@ that further develop the way I think and solve problems.</p>
             <p>The Cool Student</p>
             <p>"I love genetic engineering!"</p>
           </div>
-          
+          <!--
           <div class="persona" >
             <div>
               <img>
@@ -239,16 +270,16 @@ that further develop the way I think and solve problems.</p>
             <p>The Cool Student</p>
             <p>"I love genetic engineering!"</p>
           </div>
-          
+          -->
           <div class="persona" >
             <div>
               <img>
             </div>
             <h3>Peter Wilson</h3>
             <p>The Cool Student</p>
-            <p>"I love genetic engineering!"</p>
+            <p>Peter joined Biobuilder to learn basic bioengineering techniques in a real-world setting, as opposed to the textbooks. Hopefully, someday, bioengineering might produce a drug (or figure out how to get those microbes in his gut working) in order to cure his food allergies.</p>
           </div>
-          
+          <!--
           <div class="persona" >
             <div>
               <img>
@@ -266,14 +297,15 @@ that further develop the way I think and solve problems.</p>
             <p>The Cool Student</p>
             <p>"I love genetic engineering!"</p>
           </div>
-          
+          -->
           <div class="persona" >
             <div>
               <img>
             </div>
             <h3>Aaron Mathieu</h3>
             <p>The Cool Teacher</p>
-            <p>"I love genetic engineering!"</p>
+            <p>Aaron Mathieu is a biology teacher at Acton-Boxborough Regional High School in Acton Massachusetts, where he has been teaching since 2000. During his 19-year teaching career he has taught biology (including Advanced Placement Biology), bioethics, chemistry, physics, astronomy, physical science, forensics, and environmental science. Mr. Mathieu has been working with the BioBuilder Foundation for 5 years and is a BioBuilder Master Coach.
+</p>
           </div>
           
         </div>
@@ -287,6 +319,7 @@ that further develop the way I think and solve problems.</p>
         <div style="height:600px;">
           <img style="max-height:50%;width:auto;" src="images/outreach-1.JPG">
           <img style="max-height:50%;width:auto;" src="images/outreach-2.JPG">
+          <img style="max-height:50%;width:auto;" src="images/outreach3.jpg">
         </div>
       </section>
       
