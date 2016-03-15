@@ -34,6 +34,14 @@
         text-decoration: underline;
       }
       
+      #canvas{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+      }
+        
+      
       #banner{
         text-align: center;
       }
@@ -108,265 +116,255 @@
       
     </style>
   </head>
-  <body >
-    <div id="banner" class="flexdiv" >
-      <img src="images/banner.png">
-    </div>
-    
-    <div id="header">
-      
-      <ul class="flexdiv">
-        <li onclick="show('home')"><a href="#Home">Home</a></li>
-        <li onclick="show('project')"><a href="#Project">Project</a></li>
-        <li onclick="show('team')"><a href="#Team">Team</a></li>
-        <li onclick="show('outreach')"><a href="#Outreach">Outreach</a></li>
-        <li onclick="show('labs')"><a href="#Labs">Labs</a></li>
-        
-      </ul>
-      
-    </div>
-    <hr>
-    
-    
-    <div id="content" class="flexdiv">
-    
-      <section id="home">
-        <img src="images/abrhs_logo.jpg">
-        <h1>Home</h1>
-        <p>Welcome to the ABRHS 2015-2016 BioBuilder Team.</p>
-        <br>
-        <h1>Abstract</h1>
-        <p>Wood splinters are a common everyday injury; however, as bothersome as it is to get the splinter itself, it can prove even more cumbersome to remove it. Along with the stinging that is normally produced when one attempts to simply pull the wood splinter out, there is always the risk that small fragments of wood may be left behind. With improper removal comes the risk of infection, and if the wood splinter itself is already contaminated with bacteria or fungi, one can fall prey to a more severe illness. Even without contaminated wood, the body responds in a detrimental manner, sparking inflammatory reactions to the oils and resins of the wood. Infection is likely to occur if one removes the wooden splinter improperly, let alone if the wooden splinter is completely ignored (<a href="http://www.aafp.org/afp/2003/0615/p2557.html">Chan and Salam, 2003</a>). In this case, if the splinter is not treated, an inflammatory reaction is almost inevitable.
-	<br><br>The breakdown of cellulose from plant materials poses three major problems: first, we must isolate individual cellulose strains, then cut the long cellulose strands into smaller fragments, and finally cut those fragments down to glucose, which will be metabolized by the E. coli. For the first stage, we will use a ligninase to cut the lignin which holds the cellulose in the crystalline wood structure. This will release single strands of cellulose for attack by our endoglucanase, which will cut the long strands randomly in the middle to produce shorter and shorter strands, whose ends will come under attack by beta-glucosidase, an enzyme that will cut off individual glucose molecules and ultimately fully destroy the glucose polymers, disposing of the cellulose. 
- </p>
-        
-      </section>
-      
-      <section id="project">
-        <h1>Project</h1>
-        <p> Our project this year is to make a biomaterial that can dissolve fragmented material inside human skin, particularily wood splinters. Our E. Coli chassis must be able to dissolve this hard plant material in a reasonable time frame, and must render the splinter removable physically or immunologically.
-        </p>
-        
-        <h1>Plant Material Digestion Part Design</h1>
-        <p>
-          We are going to use three proteins to aid in the breakdown of rough plant material. 
-          Our chassis, E. Coli, will be transformed with one plasmid with all our recombinant DNA on it. 
-          Along with ampicillin resistance, the <a href="http://parts.igem.org/Part:pSB1A2">pSB1A2</a> plasmid would consist of three enzymes in series, 
-          endoglucanase (<a href="http://parts.igem.org/Part:BBa_K805011">BBa_K805011</a>), &beta;-glucosidase (<a href="http://parts.igem.org/Part:BBa_K118028">BBa_K118028</a>), and finally a ligninase (<a href="http://parts.igem.org/Part:BBa_M36188">BBa_M36188</a>), 
-          in that order. Because the endoglucanase part is activated by the presence of cellulose (and even long cellulose strands) 
-          and the three enzymes are placed in direct order, cellulose entering our chassis will ultimately cause the expression of all three enzymes. 
-          The endoglucanase part is also glucose-repressible, meaning when glucose is present as a monosaccharide in the cytoplasm, 
-          all three parts cease to be transcribed. In order to put all three enzymes onto the same plasmid
-          that the endoglucanase is located, we will utilize the built-in restriction enzymes and follow similar
-          laboratory instructions as <a href = "http://openwetware.org/wiki/Synthetic_Biology:BioBricks/3A_assembly">3A Assembly</a>. Restriction enzymes that we can use include <a href="https://www.neb.com/products/R0133-spei">SpeI</a>, <a href="https://www.neb.com/products/R0189-noti">NotI</a>, <a href="https://www.neb.com/products/R0140-psti">PstI</a>,
-          all of which act on restriction sites built in our plasmid after the main ORF sequence.
-        </p>
-        <ul style="text-align:left">
-          <li>Plasmid with Endoglucanase: <a href="http://beta.labgeni.us/registries/parts_registry/?part=BBa_K805011">http://beta.labgeni.us/registries/parts_registry/?part=BBa_K805011</a></li>
+  <body>
+    <div id="canvas"></div>
+    <div id = "pseudobody">
+      <div id="banner" class="flexdiv" >
+        <img src="images/banner.png">
+      </div>
 
-          <li>Lone pSB1A2 plasmid: <a href="http://parts.igem.org/Part:pSB1A2">http://parts.igem.org/Part:pSB1A2</a></li>
+      <div id="header">
 
-          <li>Cel5A, endoglucanase: <a href="http://parts.igem.org/Part:BBa_K805011">http://parts.igem.org/Part:BBa_K805011</a></li>
+        <ul class="flexdiv">
+          <li onclick="show('home')"><a href="#Home">Home</a></li>
+          <li onclick="show('project')"><a href="#Project">Project</a></li>
+          <li onclick="show('team')"><a href="#Team">Team</a></li>
+          <li onclick="show('outreach')"><a href="#Outreach">Outreach</a></li>
+          <li onclick="show('labs')"><a href="#Labs">Labs</a></li>
 
-          <li>Beta-Glucosidase: <a href="http://parts.igem.org/Part:BBa_K118028">http://parts.igem.org/Part:BBa_K118028</a></li>
-
-          <li>Ligninase: <a href="http://parts.igem.org/Part:BBa_M36188">http://parts.igem.org/Part:BBa_M36188</a></li>
         </ul>
-        
-        <h1>Initial Project Ideas</h1>
-        <p>
-          During our brainstorming sessions, our team members would pool together project ideas or even phrases pertaining to various biological phenomena. Next, we narrowed that list down by having members choose and research any ideas from the list we had made. Members researched problems that their concept could solve, previous iGEM and BioBuilder projects, and parts from <a href="http://parts.igem.org/Main_Page">iGEM's Registry of Standard Biological Parts</a>. After presenting research, we came together and voted on the following finalized project ideas. 
-          
-          <ol style="text-align:left">
-            <li>Calcium enriched grain (for those without access to dairy)</li>
-            <li>Powering a source of light with urine.</li>
-            <li>Water safety in developed countries (BPA, lead, triclosan, artificial sugars, microbeads, etc)</li>
-            <li>Detection of mental health biomarkers (cortisol, Iga, etc.)</li>
-            <li>Dissolving foreign material (wood splinter, etc.)</li>
-          </ol>
-          
-          
-          
-          The foreign material remover was our majority vote.
-        </p>
-        
-        
-        
-      </section>
+
+      </div>
+      <hr>
+
+      <div id="logos" class="flexdiv">
+      <a href="https://commons.wikimedia.org/wiki/File:Splinter.jpg"><img width="144px" height="180px" style="position:absolute;left:0px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Splinter.jpg/220px-Splinter.jpg"></a>
+          <img src="images/abrhs_logo.jpg">
+          <a href="http://biobuilder.org/"><img style="position:absolute;right:0px"src="http://buildingwithbiology.org/sites/building-with-biology/files/biobuilder_logo_2.png"></a>
+      </div>
+      <div id="content" class="flexdiv">
       
-      <section id="team">
-        <h1>Team</h1>
-        <p>
-          Our team consists of students from grades 9-12 of the Acton-Boxborough Regional High School. This has been our synthetic biology club's second year participating in BioBuilder and third year in activity, as we competed in the iGEM competition our first year. Our group is diverse and promotes a wide variety of paradigms in our weekly meetings:
-        </p>
-        
-        <div>
+        <section id="home">
           
-          <div class="persona" >
-            <div>
-              <img src="images/Mayank.png">
+          <h1>Home</h1>
+          <p>Welcome to the ABRHS 2015-2016 BioBuilder Team.</p>
+          <br>
+          <h1>Abstract</h1>
+          <p>Wood splinters are a common everyday injury; however, as bothersome as it is to get the splinter itself, it can prove even more cumbersome to remove it. Along with the stinging that is normally produced when one attempts to simply pull the wood splinter out, there is always the risk that small fragments of wood may be left behind. With improper removal comes the risk of infection, and if the wood splinter itself is already contaminated with bacteria or fungi, one can fall prey to a more severe illness. Even without contaminated wood, the body responds in a detrimental manner, sparking inflammatory reactions to the oils and resins of the wood. Infection is likely to occur if one removes the wooden splinter improperly, let alone if the wooden splinter is completely ignored (<a href="http://www.aafp.org/afp/2003/0615/p2557.html">Chan and Salam, 2003</a>). In this case, if the splinter is not treated, an inflammatory reaction is almost inevitable.
+    <br><br>The breakdown of cellulose from plant materials poses three major problems: first, we must isolate individual cellulose strains, then cut the long cellulose strands into smaller fragments, and finally cut those fragments down to glucose, which will be metabolized by the E. coli. For the first stage, we will use a ligninase to cut the lignin which holds the cellulose in the crystalline wood structure. This will release single strands of cellulose for attack by our endoglucanase, which will cut the long strands randomly in the middle to produce shorter and shorter strands, whose ends will come under attack by beta-glucosidase, an enzyme that will cut off individual glucose molecules and ultimately fully destroy the glucose polymers, disposing of the cellulose. 
+   </p>
+
+        </section>
+
+        <section id="project">
+          <h1>Project</h1>
+          <p> Our project this year is to make a biomaterial that can dissolve fragmented material inside human skin, particularily wood splinters. Our E. Coli chassis must be able to dissolve this hard plant material in a reasonable time frame, and must render the splinter removable physically or immunologically.
+          </p>
+
+          <h1>Plant Material Digestion Part Design</h1>
+          <p>
+            We are going to use three proteins to aid in the breakdown of rough plant material. 
+            Our chassis, E. Coli, will be transformed with one plasmid with all our recombinant DNA on it. 
+            Along with ampicillin resistance, the <a href="http://parts.igem.org/Part:pSB1A2">pSB1A2</a> plasmid would consist of three enzymes in series, 
+            endoglucanase (<a href="http://parts.igem.org/Part:BBa_K805011">BBa_K805011</a>), &beta;-glucosidase (<a href="http://parts.igem.org/Part:BBa_K118028">BBa_K118028</a>), and finally a ligninase (<a href="http://parts.igem.org/Part:BBa_M36188">BBa_M36188</a>), 
+            in that order. Because the endoglucanase part is activated by the presence of cellulose (and even long cellulose strands) 
+            and the three enzymes are placed in direct order, cellulose entering our chassis will ultimately cause the expression of all three enzymes. 
+            The endoglucanase part is also glucose-repressible, meaning when glucose is present as a monosaccharide in the cytoplasm, 
+            all three parts cease to be transcribed. In order to put all three enzymes onto the same plasmid
+            that the endoglucanase is located, we will utilize the built-in restriction enzymes and follow similar
+            laboratory instructions as <a href = "http://openwetware.org/wiki/Synthetic_Biology:BioBricks/3A_assembly">3A Assembly</a>. Restriction enzymes that we can use include <a href="https://www.neb.com/products/R0133-spei">SpeI</a>, <a href="https://www.neb.com/products/R0189-noti">NotI</a>, <a href="https://www.neb.com/products/R0140-psti">PstI</a>,
+            all of which act on restriction sites built in our plasmid after the main ORF sequence.
+          </p>
+          <ul style="text-align:left">
+            <li>Plasmid with Endoglucanase: <a href="http://beta.labgeni.us/registries/parts_registry/?part=BBa_K805011">http://beta.labgeni.us/registries/parts_registry/?part=BBa_K805011</a></li>
+
+            <li>Lone pSB1A2 plasmid: <a href="http://parts.igem.org/Part:pSB1A2">http://parts.igem.org/Part:pSB1A2</a></li>
+
+            <li>Cel5A, endoglucanase: <a href="http://parts.igem.org/Part:BBa_K805011">http://parts.igem.org/Part:BBa_K805011</a></li>
+
+            <li>Beta-Glucosidase: <a href="http://parts.igem.org/Part:BBa_K118028">http://parts.igem.org/Part:BBa_K118028</a></li>
+
+            <li>Ligninase: <a href="http://parts.igem.org/Part:BBa_M36188">http://parts.igem.org/Part:BBa_M36188</a></li>
+          </ul>
+
+          <h1>Initial Project Ideas</h1>
+          <p>
+            During our brainstorming sessions, our team members would pool together project ideas or even phrases pertaining to various biological phenomena. Next, we narrowed that list down by having members choose and research any ideas from the list we had made. Members researched problems that their concept could solve, previous iGEM and BioBuilder projects, and parts from <a href="http://parts.igem.org/Main_Page">iGEM's Registry of Standard Biological Parts</a>. After presenting research, we came together and voted on the following finalized project ideas. 
+
+            <ol style="text-align:left">
+              <li>Calcium enriched grain (for those without access to dairy)</li>
+              <li>Powering a source of light with urine.</li>
+              <li>Water safety in developed countries (BPA, lead, triclosan, artificial sugars, microbeads, etc)</li>
+              <li>Detection of mental health biomarkers (cortisol, Iga, etc.)</li>
+              <li>Dissolving foreign material (wood splinter, etc.)</li>
+            </ol>
+
+
+
+            The foreign material remover was our majority vote.
+          </p>
+
+
+
+        </section>
+
+        <section id="team">
+          <h1>Team</h1>
+          <p>
+            Our team consists of students from grades 9-12 of the Acton-Boxborough Regional High School. This has been our synthetic biology club's second year participating in BioBuilder and third year in activity, as we competed in the iGEM competition our first year. Our group is diverse and promotes a wide variety of paradigms in our weekly meetings:
+          </p>
+
+          <div>
+
+            <div class="persona" >
+              <div>
+                <img src="images/Mayank.png">
+              </div>
+              <h3>Mayank Mali</h3>
+              <p>The 11th grade website designer.</p>
+              <p>"I love all things STEM, but working on a genetic engineering project is especially fun. It always helps the learning process to see a newly learned concept turn into an end-product so tangible."</p>
             </div>
-            <h3>Mayank Mali</h3>
-            <p>The 11th grade website designer.</p>
-            <p>"I love all things STEM, but working on a genetic engineering project is especially fun. It always helps the learning process to see a newly learned concept turn into an end-product so tangible."</p>
-          </div>
-          
-          <div class="persona" >
-            <div>
-              <img src="images/RoyYoon.jpg">
+
+            <div class="persona" >
+              <div>
+                <img src="images/RoyYoon.jpg">
+              </div>
+              <h3>Roy Yoon</h3>
+              <p></p>
+              <p>The STEM field has always given me something to be interested or amazed by.
+                As I advance in my academic career I am constantly developing new interests, and grasping the world in a different point of view. Through genetic engineering, I am faced with new challenges and problems 
+  that further develop the way I think and solve problems.</p>
             </div>
-            <h3>Roy Yoon</h3>
-            <p></p>
-            <p>The STEM field has always given me something to be interested or amazed by.
-              As I advance in my academic career I am constantly developing new interests, and grasping the world in a different point of view. Through genetic engineering, I am faced with new challenges and problems 
-that further develop the way I think and solve problems.</p>
-          </div>
-          
-          
-          
-          <div class="persona" >
-            <div>
-              <img src="images/CalebTrotz.JPG">
+
+
+
+            <div class="persona" >
+              <div>
+                <img src="images/CalebTrotz.JPG">
+              </div>
+              <h3>Caleb Trotz</h3>
+              <p>The Genetic Engineer</p>
+              <p>"I joined BioBuilder because I've always had a penchant for problem solving and love to build and test novel solutions. The ability to use synthetic biology as a powerful problem solving tool was especially appealing, as I have enjoyed learning about and applying genetic concepts in the past. I also like to explore the design aspect of technology, something which BioBuilder also affords."</p>
             </div>
-            <h3>Caleb Trotz</h3>
-            <p>The Genetic Engineer</p>
-            <p>"I joined BioBuilder because I've always had a penchant for problem solving and love to build and test novel solutions. The ability to use synthetic biology as a powerful problem solving tool was especially appealing, as I have enjoyed learning about and applying genetic concepts in the past. I also like to explore the design aspect of technology, something which BioBuilder also affords."</p>
-          </div>
-          
-          <div class="persona" >
-            <div>
-              <img>
+
+            <div class="persona" >
+              <div>
+                <img>
+              </div>
+              <h3>Madhuri Jois</h3>
+              <p>The Cool Student</p>
+              <p>Madhuri Jois, Supreme Dictator, enjoys spending her time reflecting on amazing literature and TV shows. As a senior exposed to horrible SAT vocab lists, she has finally discovered that she is a self-proclaimed misanthrope. She has been in BioBuilder for three years, but joining the BioBuilder Team was merely a way for her to design a super organism that will wipe out the human race, a species that she particularly despises. One rather fascinating aspect of Madhuri is she greatly enjoys eating Dove chocolates and reading the profound statements on the wrappers. Madhuri currently uses the TV show Avatar: the Last Airbender as a reference to appropriate human etiquette. In fear of someday becoming a terrifying crotchety cat lady, she would like to make the distinction that she would prefer a flying bison as a pet. She hopes to go to medical school in her future, which, in this author’s opinion, is to gain a better understanding of the human body in order to properly eviscerate those who annoy her.</p>
             </div>
-            <h3>Madhuri Jois</h3>
-            <p>The Cool Student</p>
-            <p>Madhuri Jois, Supreme Dictator, enjoys spending her time reflecting on amazing literature and TV shows. As a senior exposed to horrible SAT vocab lists, she has finally discovered that she is a self-proclaimed misanthrope. She has been in BioBuilder for three years, but joining the BioBuilder Team was merely a way for her to design a super organism that will wipe out the human race, a species that she particularly despises. One rather fascinating aspect of Madhuri is she greatly enjoys eating Dove chocolates and reading the profound statements on the wrappers. Madhuri currently uses the TV show Avatar: the Last Airbender as a reference to appropriate human etiquette. In fear of someday becoming a terrifying crotchety cat lady, she would like to make the distinction that she would prefer a flying bison as a pet. She hopes to go to medical school in her future, which, in this author’s opinion, is to gain a better understanding of the human body in order to properly eviscerate those who annoy her.</p>
-          </div>
-          
-          <div class="persona" >
-            <div>
-              <img>
+
+            <!--
+            <div class="persona" >
+              <div>
+                <img>
+              </div>
+              <h3>Aaron Chen</h3>
+              <p>The Cool Student</p>
+              <p>"I love genetic engineering!"</p>
             </div>
-            <h3>Aaron Chen</h3>
-            <p>The Cool Student</p>
-            <p>"I love genetic engineering!"</p>
-          </div>
-          
-          
-          
-          <div class="persona" >
-            <div>
-              <img src="images/AshnaRaiker.jpg">
+            -->
+
+
+            <div class="persona" >
+              <div>
+                <img src="images/AshnaRaiker.jpg">
+              </div>
+              <h3>Ashna Raiker</h3>
+              <p>The Cool Student</p>
+              <p>Ever since I saw the club poster for BioBuilder, I knew I wanted to join. Biology as a field is so attractive; as we get to perform many hands-on activities.</p>
             </div>
-            <h3>Ashna Raiker</h3>
-            <p>The Cool Student</p>
-            <p>"I love genetic engineering!"</p>
-          </div>
-          <!--
-          <div class="persona" >
-            <div>
-              <img>
+            <!--
+            <div class="persona" >
+              <div>
+                <img>
+              </div>
+              <h3>Jana Latayan</h3>
+              <p>The Cool Student</p>
+              <p>"I love genetic engineering!"</p>
             </div>
-            <h3>Jana Latayan</h3>
-            <p>The Cool Student</p>
-            <p>"I love genetic engineering!"</p>
-          </div>
-          -->
-          <div class="persona" >
-            <div>
-              <img>
+            -->
+            <div class="persona" >
+              <div>
+                <img>
+              </div>
+              <h3>Peter Wilson</h3>
+              <p>The Cool Student</p>
+              <p>Peter joined Biobuilder to learn basic bioengineering techniques in a real-world setting, as opposed to the textbooks. Hopefully, someday, bioengineering might produce a drug (or figure out how to get those microbes in his gut working) in order to cure his food allergies.</p>
             </div>
-            <h3>Peter Wilson</h3>
-            <p>The Cool Student</p>
-            <p>Peter joined Biobuilder to learn basic bioengineering techniques in a real-world setting, as opposed to the textbooks. Hopefully, someday, bioengineering might produce a drug (or figure out how to get those microbes in his gut working) in order to cure his food allergies.</p>
-          </div>
-          <!--
-          <div class="persona" >
-            <div>
-              <img>
+            <!--
+            <div class="persona" >
+              <div>
+                <img>
+              </div>
+              <h3>Sarah Bluhm</h3>
+              <p>The Cool Student</p>
+              <p>"I love genetic engineering!"</p>
             </div>
-            <h3>Sarah Bluhm</h3>
-            <p>The Cool Student</p>
-            <p>"I love genetic engineering!"</p>
-          </div>
-          
-          <div class="persona" >
-            <div>
-              <img>
+
+            <div class="persona" >
+              <div>
+                <img>
+              </div>
+              <h3>Katherine Liu</h3>
+              <p>The Cool Student</p>
+              <p>"I love genetic engineering!"</p>
             </div>
-            <h3>Katherine Liu</h3>
-            <p>The Cool Student</p>
-            <p>"I love genetic engineering!"</p>
-          </div>
-          -->
-          <div class="persona" >
-            <div>
-              <img>
+            -->
+            <div class="persona" >
+              <div>
+                <img>
+              </div>
+              <h3>Aaron Mathieu</h3>
+              <p>The Cool Teacher</p>
+              <p>Aaron Mathieu is a biology teacher at Acton-Boxborough Regional High School in Acton Massachusetts, where he has been teaching since 2000. During his 19-year teaching career he has taught biology (including Advanced Placement Biology), bioethics, chemistry, physics, astronomy, physical science, forensics, and environmental science. Mr. Mathieu has been working with the BioBuilder Foundation for 5 years and is a BioBuilder Master Coach.
+  </p>
             </div>
-            <h3>Aaron Mathieu</h3>
-            <p>The Cool Teacher</p>
-            <p>Aaron Mathieu is a biology teacher at Acton-Boxborough Regional High School in Acton Massachusetts, where he has been teaching since 2000. During his 19-year teaching career he has taught biology (including Advanced Placement Biology), bioethics, chemistry, physics, astronomy, physical science, forensics, and environmental science. Mr. Mathieu has been working with the BioBuilder Foundation for 5 years and is a BioBuilder Master Coach.
-</p>
+
           </div>
-          
-        </div>
-        
-      </section>
-      
-      <section id="outreach">
-        <h1>Outreach</h1>
-        <p>In order to educate our local community about the field of genetic engineering as well as our own personal endeavors, our BioBuilder team hosted an exhibit at Acton-Boxborough's Science Family Night, where families could come and learn about local STEM projects in our community. During the exhibition, we also conducted a survey with our very own vitamin-A enriched genetically modified yeast-bread. We asked participants whether they would be willing to eat a genetically modified food product. Although we conducted this same survey last year at the same event, we found a larger percentage of people willing to eat genetically modified yeast bread in this year's responses.</p>
-        <br>
-        <div style="height:600px;">
-          <img style="max-height:50%;width:auto;" src="images/outreach-1.JPG">
-          <img style="max-height:50%;width:auto;" src="images/outreach-2.JPG">
-          <img style="max-height:50%;width:auto;" src="images/outreach3.jpg">
-        </div>
-      </section>
-      
-      <section id="labs">
-        <h1>Labs</h1>
-        <p>We conducted many labs, from our own transformation labs to complete our project, or introductory labs to familiarize our members with the tools and methods required for general sythnetic biology knowledge.</p>
-        <h1>What a Colorful World</h1>
-        <p>Our first lab came with the BioBuilder standard kit and was used to introduce our members to the processes and tools of transformation. Four treatments of E. coli would be produced, one with E. Coli strain 4-1 and the pPRL plasmid, strain 4-2 and pRPL plasmid, strain 4-1 and pGRN plasmid, and strain 4-2 and pPRL plasmid. The pPRL, and pGRN sequences produce purple and green pigment respectively.</p>
-        <br>
-        <div style="height:400px;">
-          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-1.JPG">
-          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-2.JPG">
-          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-3.JPG">
-          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-4.JPG">
-          <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-5.JPG">
-        </div>
-      </section>
-    
+
+        </section>
+
+        <section id="outreach">
+          <h1>Outreach</h1>
+          <p>In order to educate our local community about the field of genetic engineering as well as our own personal endeavors, our BioBuilder team hosted an exhibit at Acton-Boxborough's Science Family Night, where families could come and learn about local STEM projects in our community. During the exhibition, we also conducted a survey with our very own vitamin-A enriched genetically modified yeast-bread. We asked participants whether they would be willing to eat a genetically modified food product. Although we conducted this same survey last year at the same event, we found a larger percentage of people willing to eat genetically modified yeast bread in this year's responses.</p>
+          <br>
+          <div style="height:600px;">
+            <img style="max-height:50%;width:auto;" src="images/outreach-1.JPG">
+            <img style="max-height:50%;width:auto;" src="images/outreach-2.JPG">
+            <img style="max-height:50%;width:auto;" src="images/outreach3.jpg">
+          </div>
+        </section>
+
+        <section id="labs">
+          <h1>Labs</h1>
+          <p>We conducted many labs, from our own transformation labs to complete our project, or introductory labs to familiarize our members with the tools and methods required for general sythnetic biology knowledge.</p>
+          <h1>What a Colorful World</h1>
+          <p>Our first lab came with the BioBuilder standard kit and was used to introduce our members to the processes and tools of transformation. Four treatments of E. coli would be produced, one with E. Coli strain 4-1 and the pPRL plasmid, strain 4-2 and pRPL plasmid, strain 4-1 and pGRN plasmid, and strain 4-2 and pPRL plasmid. The pPRL, and pGRN sequences produce purple and green pigment respectively.</p>
+          <br>
+          <div style="height:400px;">
+            <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-1.JPG">
+            <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-2.JPG">
+            <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-3.JPG">
+            <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-4.JPG">
+            <img style="max-height:50%;width:auto;transform:rotate(180deg);" src="images/lab_results-5.JPG">
+          </div>
+        </section>
+
+      </div>
+      <hr>
+      <div id="footer">
+        <ul class="flexdiv">
+          <li><a href="http://www.abschools.org/home">ABRHS</a></li>
+          <li><a href="http://biobuilder.org/">BioBuilder</a></li>
+          <li><a href="http://emykion.github.io/abrhs-biobuilder/">2014-15 BioBuilder Project</a></li>
+          <li><a href="http://2014hs.igem.org/Team:Acton-BoxboroughRHS">2013-14 iGEM Project</a></li>
+        </ul>
+      </div>
+      <script src="pixi.min.js"></script>
+      <script src="main.js"></script>
     </div>
-    <hr>
-    <div id="footer">
-      <ul class="flexdiv">
-        <li><a href="http://www.abschools.org/home">ABRHS</a></li>
-        <li><a href="http://biobuilder.org/">BioBuilder</a></li>
-        <li><a href="http://emykion.github.io/abrhs-biobuilder/">2014-15 BioBuilder Project</a></li>
-        <li><a href="http://2014hs.igem.org/Team:Acton-BoxboroughRHS">2013-14 iGEM Project</a></li>
-      </ul>
-    </div>
-  
-    <script>
-      
-      function clear(){
-        cnt = document.getElementById("content");
-        for(var i=0,n=cnt.childNodes.length;i<n;i+=1){
-          cnt.childNodes[i].className="hide";
-        }
-      }  
-      
-      function show(id){
-        clear();
-        document.getElementById(id).className = "show";
-      }
-      
-      clear();
-      show("home")
-      
-      
-    </script>
   </body>
 </html>
